@@ -1,0 +1,20 @@
+{
+    "structure_category": {
+        "colour": "#82D1FF"
+    },
+    "layout_category": {
+        "colour": "#5E5FA7"
+    },
+    "inputs_selections_category": {
+        "colour": "#EFE769"
+    },
+    "info_display_category": {
+        "colour": "#EDB157"
+    },
+    "dialog_panels_category": {
+        "colour": "#ED5F57"
+    },
+    "buttons_category": {
+        "colour": "#87B88B"
+    }
+}

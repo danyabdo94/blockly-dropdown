@@ -1,0 +1,49 @@
+{
+    "name": "irithm-frontend-task",
+    "version": "0.0.0",
+    "description": "Frontend developer task for iRithm",
+    "author": "Abdelrahman Aly Abounegm",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt-ts",
+        "build": "nuxt-ts build",
+        "generate": "nuxt-ts generate",
+        "start": "nuxt-ts start",
+        "lint": "eslint --ext '.ts,.js,.vue' --ignore-path .gitignore .",
+        "test": "jest"
+    },
+    "lint-staged": {
+        "*.{js,ts,vue}": "npm run lint",
+        "*.{css,scss,vue}": "stylelint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "dependencies": {
+        "@nuxt/typescript-runtime": "^0.4.10",
+        "@nuxtjs/dotenv": "^1.4.0",
+        "blockly": "^3.20200625.1",
+        "nuxt": "^2.0.0"
+    },
+    "devDependencies": {
+        "@nuxt/typescript-build": "^1.0.3",
+        "@nuxtjs/eslint-config-typescript": "^2.0.0",
+        "@nuxtjs/eslint-module": "^2.0.0",
+        "@nuxtjs/stylelint-module": "^4.0.0",
+        "@nuxtjs/vuetify": "^1.0.0",
+        "@vue/test-utils": "^1.0.0-beta.27",
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "^24.1.0",
+        "eslint": "^7.4.0",
+        "eslint-plugin-nuxt": ">=0.4.2",
+        "husky": "^4.0.0",
+        "jest": "^24.1.0",
+        "lint-staged": "^10.2.10",
+        "stylelint": "^13.6.0",
+        "stylelint-config-standard": "^20.0.0",
+        "ts-jest": "^25.0.0",
+        "vue-jest": "^4.0.0-beta.3"
+    }
+}

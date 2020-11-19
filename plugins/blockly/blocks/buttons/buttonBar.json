@@ -1,0 +1,17 @@
+{
+    "type": "button_bar",
+    "message0": "Button Bar",
+    "message1": "buttons %1",
+    "args1": [
+        {
+            "type": "input_value",
+            "name": "CHILDREN"
+        }
+    ],
+    "inputsInline": false,
+    "output": "Widget",
+    "style": "buttons_blocks",
+    "mutator": "properties",
+    "tooltip": "",
+    "helpUrl": ""
+}

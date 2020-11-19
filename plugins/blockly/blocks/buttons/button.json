@@ -1,0 +1,27 @@
+{
+    "type": "button",
+    "message0": "Button",
+    "message1": "%1 is icon?",
+    "args1": [
+        {
+            "type": "field_checkbox",
+            "name": "IS_ICON",
+            "align": "RIGHT"
+        }
+    ],
+    "message2": "child %1",
+    "args2": [
+        {
+            "type": "input_value",
+            "name": "CHILD",
+            "check": "Widget",
+            "align": "RIGHT"
+        }
+    ],
+    "inputsInline": false,
+    "output": "Widget",
+    "mutator": "properties",
+    "style": "buttons_blocks",
+    "tooltip": "",
+    "helpUrl": ""
+}

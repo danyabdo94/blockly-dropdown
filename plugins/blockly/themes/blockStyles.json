@@ -1,0 +1,32 @@
+{
+    "structure_blocks": {
+        "colourPrimary": "#82D1FF",
+        "colourSecondary": "#CDEDFF",
+        "colourTertiary": "#5B92B3"
+    },
+    "layout_blocks": {
+        "colourPrimary": "#5E5FA7",
+        "colourSecondary": "#BFBFDC",
+        "colourTertiary": "#424275"
+    },
+    "inputs_selections_blocks": {
+        "colourPrimary": "#EFE769",
+        "colourSecondary": "#F9F5C3",
+        "colourTertiary": "#A7A24A"
+    },
+    "info_display_blocks": {
+        "colourPrimary": "#EDB157",
+        "colourSecondary": "#F8E0BC",
+        "colourTertiary": "#A67C3D"
+    },
+    "dialog_panels_blocks": {
+        "colourPrimary": "#ED5F57",
+        "colourSecondary": "#F8BFBC",
+        "colourTertiary": "#A6423D"
+    },
+    "buttons_blocks": {
+        "colourPrimary": "#87B88B",
+        "colourSecondary": "#CFE3D1",
+        "colourTertiary": "#5E8161"
+    }
+}

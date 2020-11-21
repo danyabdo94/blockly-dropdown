@@ -1,6 +1,6 @@
 <template>
     <v-row justify="center" align="center">
-        <v-col class="shrink" style="min-width: 220px">
+        <v-col class="shrink" style="min-width: 100%">
             <v-text-field
                 v-model="color"
                 hide-details

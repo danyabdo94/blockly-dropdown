@@ -11,9 +11,9 @@
             </v-col>
             <v-col cols="7">
                 <BlocklyWorkspace
+                    ref="blocklyWorkspace"
                     :options="workspaceOptions"
                     @update:selected="selectedBlock = $event"
-                    ref="blocklyWorkspace"
                 >
                     <block type="button" />
                     <block type="button_bar" />
@@ -58,12 +58,12 @@ export default Vue.extend({
                 },
                 renderer: 'thrasos',
             },
-            selectedBlock: null as Block|null,  // The currently selected block in the workspace
+            selectedBlock: null as Block|null, // The currently selected block in the workspace
             xml: '',
         };
     },
     methods: {
-        getXML() {
+        getXML () {
             const xsltDoc = new DOMParser().parseFromString(`
                 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <xsl:strip-space elements="*"/>
@@ -76,13 +76,13 @@ export default Vue.extend({
                 <xsl:output indent="yes"/>
                 </xsl:stylesheet>
             `, 'application/xml');
-            const xsltProcessor = new XSLTProcessor();    
+            const xsltProcessor = new XSLTProcessor();
             xsltProcessor.importStylesheet(xsltDoc);
 
             const xml: Element = (this.$refs.blocklyWorkspace as any).toXml();
             const transformedXml = xsltProcessor.transformToDocument(xml);
             this.xml = new XMLSerializer().serializeToString(transformedXml).replace(/&quot;/g, '"');
-        }
+        },
     },
 });
 </script>

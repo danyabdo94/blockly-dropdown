@@ -1,13 +1,31 @@
 <template>
-    <p class="text-center">
-        Properties will appear here.
-    </p>
+    <div v-if="block && block.data">
+        <v-row
+            v-for="element in JSON.parse(block.data)"
+            :key="element.name"
+            justify="space-around"
+        >
+            <input-engine :element="element" />
+        </v-row>
+    </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import { BlockSvg } from 'blockly';
+import InputEngine from './InputEngine.vue';
+import { Block as BlockType } from '@/plugins/blockly/types';
 
 export default Vue.extend({
     name: 'PropertyPane',
+    components: { InputEngine },
+    props: {
+        block: BlockSvg,
+    },
+    updated () {
+        const block = this.block as BlockType;
+        console.log(this.block ? JSON.parse(this.block?.data) : null);
+        console.log(block?.properties);
+    },
 });
 </script>

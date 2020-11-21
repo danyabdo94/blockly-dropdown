@@ -92,3 +92,4 @@ firebase-auth-sw.js
 
 # Firebase config files (API keys)
 config
+.vscode/settings.json

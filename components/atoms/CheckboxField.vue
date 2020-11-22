@@ -1,5 +1,6 @@
 <template>
     <v-checkbox
+        v-if="!element.condition || canView()"
         v-model="model"
         :label="element.name"
         @change="change"
@@ -24,6 +25,10 @@ export default Vue.extend({
         change (data) {
             // eslint-disable-next-line no-eval
             eval(`this.properties ${this.element.path} = data`);
+        },
+        canView () {
+            // eslint-disable-next-line no-eval
+            return eval(`this.properties ${this.element.condition}`);
         },
     },
 });

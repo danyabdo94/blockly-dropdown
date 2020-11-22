@@ -1,5 +1,5 @@
 <template>
-    <v-select v-model="model" :items="element.options" :label="element.name" @change="change" />
+    <v-select v-if="!element.condition || canView()" v-model="model" :items="element.options" :label="element.name" @change="change" />
 </template>
 
 <script>
@@ -20,6 +20,10 @@ export default Vue.extend({
         change (data) {
             // eslint-disable-next-line no-eval
             eval(`this.properties ${this.element.path} = data`);
+        },
+        canView () {
+            // eslint-disable-next-line no-eval
+            return eval(`this.properties ${this.element.condition}`);
         },
     },
 });

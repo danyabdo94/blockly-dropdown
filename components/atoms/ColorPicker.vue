@@ -1,5 +1,5 @@
 <template>
-    <v-row justify="center" align="center">
+    <v-row v-if="!element.condition || canView()" justify="center" align="center">
         <v-col class="shrink" style="min-width: 100%">
             <v-text-field
                 v-model="color"
@@ -71,6 +71,10 @@ export default Vue.extend({
         change (data) {
             // eslint-disable-next-line no-eval
             eval(`this.properties ${this.element.path} = data.hexa`);
+        },
+        canView () {
+            // eslint-disable-next-line no-eval
+            return eval(`this.properties ${this.element.condition}`);
         },
     },
 });

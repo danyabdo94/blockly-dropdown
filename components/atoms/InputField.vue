@@ -1,5 +1,5 @@
 <template>
-    <v-text-field v-model="model" :label="element.name" :type="element._type" @change="change" />
+    <v-text-field v-if="!element.condition || canView()" v-model="model" :label="element.name" :type="element._type" @change="change" />
 </template>
 
 <script>
@@ -20,6 +20,10 @@ export default Vue.extend({
         change (data) {
             // eslint-disable-next-line no-eval
             eval(`this.properties ${this.element.path} = data`);
+        },
+        canView () {
+            // eslint-disable-next-line no-eval
+            return eval(`this.properties ${this.element.condition}`);
         },
     },
 });

@@ -3,7 +3,8 @@
         <v-col
             v-for="element in JSON.parse(block.data)"
             :key="element.name"
-            justify="space-around"
+            justify="center"
+            class="pa-0"
         >
             <input-engine :element="element" :properties="block.properties" />
         </v-col>

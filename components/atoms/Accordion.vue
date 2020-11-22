@@ -1,5 +1,5 @@
 <template>
-    <v-expansion-panels ref="panel" class="ma-2">
+    <v-expansion-panels ref="panel" class="pa-1">
         <v-expansion-panel>
             <v-expansion-panel-header>
                 {{ element.name }}

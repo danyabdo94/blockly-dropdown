@@ -13,9 +13,9 @@ Blockly.Blocks[blockName] = {
         },
         menu: {
             elevation: null, // number
-            focusColor: null, // color
+            focusColor: 'white', // color
             autofocus: null, // boolean
-            backgroundColor: null, // color
+            backgroundColor: 'white', // color
         },
     },
     init () {
@@ -28,14 +28,17 @@ Blockly.Blocks[blockName] = {
                 _type: 'accordion',
                 children: [
                     {
+                        path: '["button"]["underline"]',
                         name: 'underline',
                         _type: 'number',
                     },
                     {
+                        path: '["button"]["hint"]',
                         name: 'hint',
                         _type: 'text',
                     },
                     {
+                        path: '["button"]["disabledHint"]',
                         name: 'disabledHint',
                         _type: 'text',
                     },
@@ -46,18 +49,22 @@ Blockly.Blocks[blockName] = {
                 _type: 'accordion',
                 children: [
                     {
+                        path: '["menu"]["elevation"]',
                         name: 'elevation',
                         _type: 'number',
                     },
                     {
+                        path: '["menu"]["focusColor"]',
                         name: 'focusColor',
                         _type: 'color',
                     },
                     {
+                        path: '["menu"]["autofocus"]',
                         name: 'autofocus',
                         _type: 'boolean',
                     },
                     {
+                        path: '["menu"]["backgroundColor"]',
                         name: 'backgroundColor',
                         _type: 'color',
                     },

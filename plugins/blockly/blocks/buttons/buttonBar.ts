@@ -34,6 +34,7 @@ Blockly.Blocks[blockName] = {
                 children: [
                     {
                         name: 'theme',
+                        path: '["layout"]["theme"]',
                         _type: 'select',
                         options: [
                             'spaceAround',
@@ -45,6 +46,7 @@ Blockly.Blocks[blockName] = {
                         ],
                     },
                     {
+                        path: '["layout"]["overflowSpacing"]',
                         name: 'overflowSpacing',
                         _type: 'number',
                     },
@@ -56,6 +58,7 @@ Blockly.Blocks[blockName] = {
                 children: [
                     {
                         name: 'theme',
+                        path: '["buttons"]["theme"]',
                         _type: 'select',
                         options: [
                             'accent',
@@ -64,30 +67,36 @@ Blockly.Blocks[blockName] = {
                         ],
                     },
                     {
+                        path: '["buttons"]["minWidth"]',
                         name: 'minWidth',
                         _type: 'number',
                     },
                     {
-                        name: 'overflowSpacing',
-                        _type: 'minHeight',
+                        path: '["buttons"]["minHeight"]',
+                        name: 'minHeight',
+                        _type: 'number',
                     },
                     {
                         name: 'padding',
                         _type: 'accordion',
                         children: [
                             {
+                                path: '["buttons"]["padding"]["top"]',
                                 name: 'top',
                                 _type: 'number',
                             },
                             {
+                                path: '["buttons"]["padding"]["bottom"]',
                                 name: 'bottom',
                                 _type: 'number',
                             },
                             {
+                                path: '["buttons"]["padding"]["left"]',
                                 name: 'left',
                                 _type: 'number',
                             },
                             {
+                                path: '["buttons"]["padding"]["right"]',
                                 name: 'right',
                                 _type: 'number',
                             },

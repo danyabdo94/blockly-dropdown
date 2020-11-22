@@ -9,6 +9,7 @@
                     v-for="child in element.children"
                     :key="child.name"
                     :element="child"
+                    :properties="properties"
                 />
             </v-expansion-panel-content>
         </v-expansion-panel>
@@ -22,6 +23,6 @@ export default Vue.extend({
     components: {
         InputEngine: () => import('../InputEngine.vue'),
     },
-    props: ['element'],
+    props: ['element', 'properties'],
 });
 </script>

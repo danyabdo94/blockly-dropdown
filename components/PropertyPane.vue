@@ -5,7 +5,7 @@
             :key="element.name"
             justify="space-around"
         >
-            <input-engine :element="element" />
+            <input-engine :element="element" :properties="block.properties" />
         </v-col>
     </div>
 </template>

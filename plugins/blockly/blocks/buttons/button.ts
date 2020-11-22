@@ -8,8 +8,8 @@ Blockly.Blocks[blockName] = {
     properties: {
         type: 'raised', // options: 'raised', 'flat', 'outline'
         text: { // colors
-            colorEnabled: null,
-            colorDisabled: null,
+            colorEnabled: 'white',
+            colorDisabled: 'white',
         },
         elevation: { // numbers
             normal: null,
@@ -31,6 +31,7 @@ Blockly.Blocks[blockName] = {
         [
             {
                 name: 'type',
+                path: '["type"]',
                 _type: 'select',
                 options: [
                     'raised',
@@ -41,27 +42,27 @@ Blockly.Blocks[blockName] = {
             {
                 name: 'text',
                 children: [
-                    { name: 'colorEnabled', _type: 'color' },
-                    { name: 'colorDisabled', _type: 'color' },
+                    { name: 'colorEnabled', _type: 'color', path: '["text"]["colorEnabled"]' },
+                    { name: 'colorDisabled', _type: 'color', path: '["text"]["colorDisabled"]' },
                 ],
                 _type: 'accordion',
             },
             {
                 name: 'elevation',
                 children: [
-                    { name: 'normal', _type: 'number' },
-                    { name: 'focus', _type: 'number', condition: "type==='raised'" },
-                    { name: 'highlight', _type: 'number', condition: "type==='raised'" },
-                    { name: 'disabled', _type: 'number', condition: "type==='raised'" },
+                    { name: 'normal', _type: 'number', path: '["elevation"]["normal"]' },
+                    { name: 'focus', _type: 'number', condition: "type==='raised'", path: '["elevation"]["focus"]' },
+                    { name: 'highlight', _type: 'number', condition: "type==='raised'", path: '["elevation"]["highlight"]' },
+                    { name: 'disabled', _type: 'number', condition: "type==='raised'", path: '["elevation"]["disabled"]' },
                 ],
                 _type: 'accordion',
             },
             {
                 name: 'border',
                 children: [
-                    { name: 'normal', _type: 'number', condition: "type==='outline'" },
-                    { name: 'disabled', _type: 'number', condition: "type==='outline'" },
-                    { name: 'highlighted', _type: 'number', condition: "type==='outline'" },
+                    { name: 'normal', _type: 'number', condition: "type==='outline'", path: '["border"]["normal"]' },
+                    { name: 'disabled', _type: 'number', condition: "type==='outline'", path: '["border"]["disabled"]' },
+                    { name: 'highlighted', _type: 'number', condition: "type==='outline'", path: '["border"]["highlighted"]' },
                 ],
                 _type: 'accordion',
             },

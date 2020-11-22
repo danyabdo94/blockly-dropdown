@@ -1,5 +1,5 @@
 <template>
-    <v-row v-if="!element.condition || canView()" justify="center" align="center">
+    <v-row v-if="!element.condition || canView()" justify="center" align="center" class="pa-1">
         <v-col class="shrink" style="min-width: 100%">
             <v-text-field
                 v-model="color"

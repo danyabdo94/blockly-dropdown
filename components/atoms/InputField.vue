@@ -1,5 +1,12 @@
 <template>
-    <v-text-field v-if="!element.condition || canView()" v-model="model" :label="element.name" :type="element._type" @change="change" />
+    <v-text-field
+        v-if="!element.condition || canView()"
+        v-model="model"
+        class="pa-1"
+        :label="element.name"
+        :type="element._type"
+        @change="change"
+    />
 </template>
 
 <script>

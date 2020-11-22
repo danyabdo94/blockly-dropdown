@@ -1,5 +1,12 @@
 <template>
-    <v-select v-if="!element.condition || canView()" v-model="model" :items="element.options" :label="element.name" @change="change" />
+    <v-select
+        v-if="!element.condition || canView()"
+        v-model="model"
+        class="pa-1"
+        :items="element.options"
+        :label="element.name"
+        @change="change"
+    />
 </template>
 
 <script>

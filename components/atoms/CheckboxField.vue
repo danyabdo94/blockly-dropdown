@@ -4,6 +4,7 @@
         v-model="model"
         :label="element.name"
         @change="change"
+        class="pa-1"
     />
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div v-if="block && block.data">
+    <div v-if="block && block.data" class="pa-1">
         <v-col
             v-for="element in JSON.parse(block.data)"
             :key="element.name"

@@ -20,7 +20,7 @@
                     <block type="dropdown_button" />
                 </BlocklyWorkspace>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="2" class="grey lighten-3">
                 <PropertyPane :block="selectedBlock" />
             </v-col>
         </v-row>

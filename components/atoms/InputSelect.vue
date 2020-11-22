@@ -4,7 +4,7 @@
         v-model="model"
         class="pa-1"
         :items="element.options"
-        :label="element.name"
+        :label="element.label"
         @change="change"
     />
 </template>

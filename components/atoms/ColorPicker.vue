@@ -13,7 +13,7 @@
                 color="white"
                 width="50%"
             >
-                <p>{{ element.name }}</p>
+                <p>{{ element.label }}</p>
             </v-sheet>
         </v-col>
         <v-col

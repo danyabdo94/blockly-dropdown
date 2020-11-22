@@ -2,7 +2,7 @@
     <v-expansion-panels ref="panel" class="pa-1">
         <v-expansion-panel>
             <v-expansion-panel-header>
-                {{ element.name }}
+                {{ element.label }}
             </v-expansion-panel-header>
             <v-expansion-panel-content>
                 <input-engine

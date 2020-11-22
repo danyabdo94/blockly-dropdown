@@ -2,9 +2,9 @@
     <v-checkbox
         v-if="!element.condition || canView()"
         v-model="model"
-        :label="element.name"
-        @change="change"
+        :label="element.label"
         class="pa-1"
+        @change="change"
     />
 </template>
 

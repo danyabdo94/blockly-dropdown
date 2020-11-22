@@ -3,7 +3,7 @@
         v-if="!element.condition || canView()"
         v-model="model"
         class="pa-1"
-        :label="element.name"
+        :label="element.label"
         :type="element._type"
         @change="change"
     />
